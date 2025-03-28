@@ -1,21 +1,19 @@
 {
   "version": 2,
   "functions": {
-    "api/index.py": {
+    "api/*.py": {
       "memory": 1024,
-      "maxDuration": 30
+      "maxDuration": 10
     }
   },
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/api/index.py"
-    }
-  ],
-  "builds": [
+      "src": "/api/solana",
+      "dest": "/api/solana.py"
+    },
     {
-      "src": "api/index.py",
-      "use": "@vercel/python"
+      "src": "/(.*)",
+      "dest": "/api/solana.py"
     }
   ]
-} 
+}
