@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка баланса Solana</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="animated-background">
+        <!-- Элементы будут добавлены через JavaScript -->
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">NEVER SLEEP AI MASTER</div>
+            <div class="logo-subtitle">(аня зарабатывает)</div>
+            <h1>Проверка баланса кошелька Solana</h1>
+        </header>
+        
+        <main>
+            <div class="wallet-form">
+                <div class="input-group">
+                    <input type="text" id="wallet-address" placeholder="Введите адрес кошелька Solana">
+                    <button id="check-balance">Проверить баланс</button>
+                </div>
+                
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Получаем данные...</p>
+                </div>
+                
+                <div class="result" id="result">
+                    <h2>Баланс кошелька</h2>
+                    <div class="balance-info">
+                        <p>Адрес: <span id="result-address"></span></p>
+                        <p>Баланс: <span id="result-balance"></span> SOL</p>
+                    </div>
+                </div>
+                
+                <div class="error" id="error">
+                    <p id="error-message"></p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2024 NEVER SLEEP AI MASTER | Проверка баланса Solana</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
